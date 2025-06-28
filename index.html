@@ -6,34 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Management</title>
 
-    <!-- Link to external stylesheet -->
+    <!-- Link to external CSS stylesheet -->
     <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 
 <body>
-    <!-- Main container for page layout -->
+    <!-- Main page container -->
     <div class="container">
 
-        <!-- Header section with title -->
+        <!-- Header section -->
         <header class="center-column-div">
             <h1>Data Management: Objects-Sets-Maps</h1>
         </header>
 
-        <!-- Main content area -->
+        <!-- Main content section -->
         <main class="center-column-div">
+            <button onclick="showObject()">List of Products (Object)</button>
+            <div id="object-container"></div>
 
+            <button onclick="showSet()">Unique Products (Set)</button>
+            <div id="set-container"></div>
+
+            <button onclick="showMap()">Categories & Products (Map)</button>
+            <div id="map-container"></div>
         </main>
 
-        <!-- Footer with author info -->
+        <!-- Footer with author information -->
         <footer class="center-column-div">
             &copy; 2025 Carlos Rojas. All rights reserved.
         </footer>
     </div>
 
-    <!-- SweetAlert2 library for modern alerts -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-    <!-- JavaScript logic for a dynamic message and GIF -->
+    <!-- JavaScript logic -->
     <script src="./assets/js/main.js"></script>
 </body>
 
