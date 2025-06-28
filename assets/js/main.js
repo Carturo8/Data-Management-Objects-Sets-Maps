@@ -73,8 +73,3 @@ function showMap() {
     // Display the list in the container
     container.appendChild(categoryList);
 }
-
-// console.log("Pruebas completas de gestión de datos:");
-// console.log("Lista de products (Object):", products);
-// console.log("Lista de products únicos (Set):", setProducts);
-// console.log("Categorías y products (Map):", mapProducts);
