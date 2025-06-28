@@ -26,23 +26,7 @@ function showObject() {
     // Iterate through each product in the products object using its ID
     for (const id in products) {
         const productItem = document.createElement("li");
-
-        // Create and set content for product ID
-        const productId = document.createElement("p");
-        productId.textContent = `ID: ${products[id].id}`;
-
-        // Create and set content for the product name
-        const productName = document.createElement("p");
-        productName.textContent = `Name: ${products[id].name}`;
-
-        // Create and set content for the product price
-        const productPrice = document.createElement("p");
-        productPrice.textContent = `Price: $${products[id].price}`;
-
-        // Append product info to the list item
-        productItem.appendChild(productId);
-        productItem.appendChild(productName);
-        productItem.appendChild(productPrice);
+        productItem.textContent = `ID: ${products[id].id}, Name: ${products[id].name}, Price: $${products[id].price}`;
 
         // Append the list item to the main list
         productList.appendChild(productItem);
