@@ -23,6 +23,7 @@ function showObject() {
 
     const productList = document.createElement("ul");
 
+    // Iterate through each product in the products object using its ID
     for (const id in products) {
         const productItem = document.createElement("li");
 
@@ -71,10 +72,22 @@ function showSet() {
 }
 
 function showMap() {
-    // Recorrer el Map de products
-    mapProducts.forEach((product, category) => {
-        console.log(`Category: ${category}, Product: ${product}`);
+    const container = document.getElementById("map-container");
+    container.innerHTML = ""; // Clear previous content
+
+    const categoryList = document.createElement("ul");
+
+    // Iterate through the Map of categories and their corresponding products
+    mapProducts.forEach((productName, categoryName) => {
+        const categoryItem = document.createElement("li");
+        categoryItem.textContent = `Category: ${categoryName}, Product: ${productName}`;
+
+        // Add the list item to the main category list
+        categoryList.appendChild(categoryItem);
     });
+
+    // Display the list in the container
+    container.appendChild(categoryList);
 }
 
 // console.log("Pruebas completas de gestión de datos:");
