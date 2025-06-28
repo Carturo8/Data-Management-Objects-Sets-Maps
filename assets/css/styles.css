@@ -5,14 +5,16 @@
     box-sizing: inherit;
 }
 
-/* Base styles for the document */
+/* Base styles */
 html {
     box-sizing: border-box;
-    font-size: 62.5%; /* Makes 1rem = 10px for easy scaling */
-    background-color: white;
+    font-size: 62.5%; /* 1rem = 10px */
+    background-color: #f9f9f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
 }
 
-/* Layout container: full height with header, main, footer */
+/* Layout container: full height */
 .container {
     display: grid;
     min-height: 100vh;
@@ -24,32 +26,82 @@ html {
 .center-column-div {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     text-align: center;
 }
 
-/* Header section styling */
+/* Header styles */
 header {
-    padding: 2rem 0;
+    padding: 3rem 0;
     font-size: 3rem;
-    color: #8CCDEB;
-    border-bottom: 2px solid lightslategrey;
+    color: #0d6efd; /* Bootstrap blue */
+    border-bottom: 2px solid #ccc;
+    background-color: white;
+    width: 100%;
 }
 
-/* Main content area */
+/* Main content styles */
 main {
     max-width: 120rem;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
-    padding: 3rem 0;
+    padding: 4rem 0;
+    gap: 2rem;
 }
 
-/* Footer section styling */
+button {
+    margin: 2rem 0;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0b5ed7;
+}
+
+/* Output containers */
+#object-container,
+#set-container,
+#map-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0.8rem;
+}
+
+/* List styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+}
+
+li {
+    padding: 1rem;
+    background-color: #f1f3f5;
+    border-radius: 0.5rem;
+}
+
+/* Footer styles */
 footer {
-    padding: 1rem 0;
+    padding: 2rem 0;
     font-size: 1.5rem;
     font-weight: bold;
-    color: red;
-    border-top: 2px solid lightslategrey;
+    color: #555;
+    border-top: 2px solid #ccc;
+    background-color: white;
+    width: 100%;
 }
