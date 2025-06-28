@@ -19,7 +19,7 @@ const mapProducts = new Map([
 
 function showObject() {
     const container = document.getElementById("object-container");
-    container.innerHTML = ""; // ✅ Clear previous content
+    container.innerHTML = ""; // Clear previous content
 
     const productList = document.createElement("ul");
 
@@ -53,16 +53,21 @@ function showObject() {
 
 function showSet() {
     const container = document.getElementById("set-container");
-    container.innerHTML = ""; // ✅ Limpiar contenido anterior
+    container.innerHTML = ""; // Clear previous content
 
-    const setList = document.createElement("ul");
+    const productList = document.createElement("ul");
 
-    for (const product of setProducts) {
-        console.log("Product único:", product);
-        const elementList = document.createElement("li");
-        elementList.textContent = product;
-        setList.appendChild(elementList);
+    // Iterate through each unique product name in the Set
+    for (const productName of setProducts) {
+        const productItem = document.createElement("li");
+        productItem.textContent = productName;
+
+        // Append the list item to the main list
+        productList.appendChild(productItem);
     }
+
+    // Display the list in the container
+    container.appendChild(productList);
 }
 
 function showMap() {
